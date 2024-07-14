@@ -1,27 +1,72 @@
-# NgrxTutorial
+# DevToys.io - NgRx Tutorial Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.6.
+This project demonstrates the integration of NgRx in an Angular standalone application. It includes state management for a simple item list with actions, reducers, effects, and selectors.
 
-## Development server
+*This is for educational purpose only. DO NOT use in production*
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+***
 
-## Code scaffolding
+## Prerequisites
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Node.js (v14 or higher)
+- Angular CLI (v18 or higher)
 
-## Build
+## Getting Started
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Follow these instructions to set up and run the project on your local machine.
 
-## Running unit tests
+### Step 1: Clone the Repository
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+git clone https://github.com/your-username/ngrx-tutorial.git
+cd ngrx-tutorial
+```
 
-## Running end-to-end tests
+### Step 2: Install Dependencies
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```bash
+npm install
+```
 
-## Further help
+### Step 3: Run the Application
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+```bash
+ng serve
+```
+
+Open your browser and navigate to `http://localhost:4200/`. You should see the item list application running.
+
+## Project Structure
+
+```plaintext
+ngrx-tutorial/
+├── src/
+│   ├── app/
+│   │   ├── item/
+│   │   │   ├── item.actions.ts
+│   │   │   ├── item.effects.ts
+│   │   │   ├── item.model.ts
+│   │   │   ├── item.reducer.ts
+│   │   │   ├── item.selectors.ts
+│   │   │   ├── item.service.ts
+│   │   │   ├── in-memory-data.service.ts
+│   │   │   ├── item-list.component.ts
+│   │   │   ├── item-list.component.html
+│   │   │   ├── item-list.component.css
+│   │   ├── app.config.ts
+│   │   ├── app.component.ts
+│   ├── main.ts
+```
+
+## Summary
+
+This project is a practical example of integrating NgRx into an Angular standalone application. The application includes:
+
+- **State Management:** Using NgRx for managing the state of an item list.
+- **Actions:** Defining actions for loading and adding items.
+- **Reducers:** Handling state changes based on actions.
+- **Effects:** Managing side effects such as fetching data from a mock backend.
+- **Selectors:** Selecting and deriving data from the state.
+- **In-Memory Web API:** Mock backend for simulating API calls.
+
+By following this setup, you can understand how to implement NgRx in your Angular applications to manage state efficiently and maintain a clean architecture.
